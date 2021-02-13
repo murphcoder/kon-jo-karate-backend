@@ -1,5 +1,14 @@
 class StudentsController < ApplicationController
 
+    def index
+        @students = Student.all
+        if @students
+            render json: {students: @students}
+        else
+            render json: {status: 500, errors: ['no students found']}
+        end
+    end
+
     def show
         @student = Student.find(params[:id])
         if @student

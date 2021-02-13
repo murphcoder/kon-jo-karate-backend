@@ -5,7 +5,7 @@ class ParentsController < ApplicationController
         if @parent
             render json: {parent: @parent}
         else
-            render json: {status: 500, errors: ['user not found']}
+            render json: {status: 500, errors: ['parent not found']}
         end
     end
 
