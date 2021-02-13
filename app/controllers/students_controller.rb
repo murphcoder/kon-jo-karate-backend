@@ -2,7 +2,7 @@ class StudentsController < ApplicationController
 
     def show
         @student = Student.find(params[:id])
-        if @user
+        if @student
             render json: {student: @student}
         else
             render json: {status: 500, errors: ['user not found']}
