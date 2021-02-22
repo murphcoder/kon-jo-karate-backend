@@ -8,6 +8,7 @@ class CreateParents < ActiveRecord::Migration[6.0]
       t.string :cell_phone
       t.integer :balance
       t.recovery :string
+      t.boolean :admin, default: false
 
       t.timestamps
     end
